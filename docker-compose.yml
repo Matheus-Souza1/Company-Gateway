@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  gateway:
+    image: gateway
+    build:
+      context: .
+      dockerfile: Company.Gateway/Dockerfile
+
+  product:
+    image: product
+    build:
+      context: .
+      dockerfile: Company.Products/Dockerfile
+
+  client:
+    image: client
+    build:
+      context: .
+      dockerfile: Company.Clients/Dockerfile

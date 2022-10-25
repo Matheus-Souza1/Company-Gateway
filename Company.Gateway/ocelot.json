@@ -1,0 +1,53 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "client",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/client/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "client",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/client/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "product",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/product/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "product",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/product/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    }
+  ],
+  "GlobalConfiguration": {}
+}
